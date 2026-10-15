@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/kintsugi-health/main/json-schema/kintsugi-health-get-v2-predict-sessions-sessionid-response-schema.json",
+  "title": "GetV2PredictSessionsSessionidResponse",
+  "x-generated": "2026-10-14",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/kintsugi-health-openapi-generated.yml#/components/schemas/GetV2PredictSessionsSessionidResponse",
+  "type": "object",
+  "properties": {
+    "200": {
+      "type": "object",
+      "description": "Prediction result object (see page)."
+    },
+    "401": {
+      "type": "object",
+      "description": "{ \"message\": \"string\" }"
+    },
+    "403": {
+      "type": "object",
+      "description": "{ \"message\": \"string\" }"
+    },
+    "404": {
+      "type": "object",
+      "description": "{ \"message\": \"string\" }"
+    },
+    "417": {
+      "type": "object",
+      "description": "Expectation failed with partial result."
+    },
+    "422": {
+      "type": "object",
+      "description": "{ \"message\": \"string\" }"
+    },
+    "500": {
+      "type": "object",
+      "description": "{ \"message\": \"string\" }"
+    }
+  }
+}

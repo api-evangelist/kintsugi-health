@@ -1,0 +1,89 @@
+generated: '2026-10-14'
+method: derived
+generator: derive-mcp-candidate.py
+source:
+- openapi/_ae-authored/kintsugi-health-openapi-generated.yml
+status: candidate
+deployment:
+  mode: none
+  auth: unknown
+  verified: probed
+note: No MCP server was found. The pre-flight posted tools/list to /mcp on www.kintsugihealth.com, trust.kintsugihealth.com, api.kintsugihealth.com;
+  verdict absent. Candidate tools below are derived from the 15 operation(s) in the provider's own OpenAPI (15 listed); they describe what a server
+  WOULD expose, not one that exists.
+tools:
+- name: patch_feedback_server_phq_9
+  operationId: patch_feedback_server_phq_9
+  method: PATCH
+  path: /feedback/server/phq/9
+  description: PHQ-9
+- name: post_initiate
+  operationId: post_initiate
+  method: POST
+  path: /initiate
+  description: Initiate a Session
+- name: post_predict
+  operationId: post_predict
+  method: POST
+  path: /predict
+  description: Submit Audio for Analysis
+- name: post_predict_server_depression_depressionid
+  operationId: post_predict_server_depression_depressionid
+  method: POST
+  path: /predict/server/depression/{depressionid}
+  description: Binary
+- name: patch_v1_feedback_server_depression_binary
+  operationId: patch_v1_feedback_server_depression_binary
+  method: PATCH
+  path: /v1/feedback/server/depression/binary
+  description: PATCH /v1/feedback/server/depression/binary
+- name: patch_v1_feedback_server_phq_phqid
+  operationId: patch_v1_feedback_server_phq_phqid
+  method: PATCH
+  path: /v1/feedback/server/phq/{phqid}
+  description: PATCH /v1/feedback/server/phq/2
+- name: post_v1_initiate
+  operationId: post_v1_initiate
+  method: POST
+  path: /v1/initiate
+  description: POST /v1/initiate
+- name: post_v1_predict_server_depression_depressionid
+  operationId: post_v1_predict_server_depression_depressionid
+  method: POST
+  path: /v1/predict/server/depression/{depressionid}
+  description: POST /v1/predict/server/depression/binary
+- name: patch_v2_feedback_depression_binary
+  operationId: patch_v2_feedback_depression_binary
+  method: PATCH
+  path: /v2/feedback/depression/binary
+  description: Submit Feedback – Binary depression result
+- name: patch_v2_feedback_gad_7
+  operationId: patch_v2_feedback_gad_7
+  method: PATCH
+  path: /v2/feedback/gad/7
+  description: Submit Feedback – GAD‑7
+- name: patch_v2_feedback_phq_phqid
+  operationId: patch_v2_feedback_phq_phqid
+  method: PATCH
+  path: /v2/feedback/phq/{phqid}
+  description: Submit Feedback – PHQ‑2
+- name: get_v2_predict_sessions_session_id
+  operationId: get_v2_predict_sessions_sessionId
+  method: GET
+  path: /v2/predict/sessions/{sessionId}
+  description: Predict (Get Results) – Get the prediction associated with a given session ID.
+- name: get_v2_predict_users_user_id
+  operationId: get_v2_predict_users_userId
+  method: GET
+  path: /v2/predict/users/{userId}
+  description: Predict (Get Results) – Return all predictions for a given user ID.
+- name: post_v2_prediction
+  operationId: post_v2_prediction
+  method: POST
+  path: /v2/prediction/
+  description: Predict (Submit Audio)
+- name: post_v2_v2id
+  operationId: post_v2_v2id
+  method: POST
+  path: /v2/{v2id}
+  description: Initiate a Session

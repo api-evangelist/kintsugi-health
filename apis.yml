@@ -1,23 +1,129 @@
 aid: kintsugi-health
+
 name: Kintsugi Health
-description: 'Kintsugi Health is a company surfaced via the API Evangelist harvest backlog (source: tag-qc)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://cdn.prod.website-files.com/62bdd1459016066e353bd6b0/62ff59f1af0efcfec060df13_open-graph-image.jpeg
+
+description: Kintsugi Health provides AI-driven voice analysis solutions to detect mental health challenges and other clinical indicators from
+  speech. Their Kintsugi Voice API enables developers to integrate real-time voice biomarker detection into healthcare applications, supporting
+  use cases from depression screening to deep‑fake detection. The company emphasizes privacy, regulatory compliance, and evidence‑based technology,
+  aiming to improve patient outcomes through innovative digital health tools.
+
 url: https://raw.githubusercontent.com/api-evangelist/kintsugi-health/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:tag-qc
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-14 (modular-v1; was harvest)
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: API documentation pages exist but no OpenAPI, AsyncAPI, GraphQL, or other machine‑readable contract was found.
+  evidence:
+  - url: https://api.kintsugihealth.com/openapi.json
+    status: 307
+  checked: '2026-10-14'
+
 specificationVersion: '0.20'
+
 created: '2026-10-14'
+
 modified: '2026-10-14'
+
 tags:
-- Company
-apis: []
+- HealthTech
+- AI
+- VoiceAnalytics
+- MentalHealth
+- DigitalHealth
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Spectral
+  url: rules/kintsugi-health-rules.yml
+- type: JSONLD
+  url: json-ld/kintsugi-health-context.jsonld
+- type: Vocabulary
+  url: vocabulary/kintsugi-health-vocabulary.yml
+- type: DataModel
+  url: data-model/kintsugi-health-data-model.yml
+- type: Authentication
+  url: authentication/kintsugi-health-authentication.yml
+- type: Conformance
+  url: conformance/kintsugi-health-conformance.yml
+- type: Hosts
+  url: hosts/kintsugi-health-hosts.yml
+- type: Vendors
+  url: vendors/kintsugi-health-vendors.yml
+- type: TrustCenter
+  url: https://trust.kintsugihealth.com/
+- type: Security
+  url: https://www.kintsugihealth.com/blog-categories/security
+- type: SDKs
+  url: https://www.kintsugihealth.com/api/sdks
+- type: Newsroom
+  url: https://www.kintsugihealth.com/press
+- type: Leadership
+  url: https://www.kintsugihealth.com/blog-categories/team
+- type: DomainSecurity
+  url: security/kintsugi-health-domain-security.yml
 - type: Website
   url: https://www.kintsugihealth.com
+- type: Documentation
+  url: https://www.kintsugihealth.com/api/intro-to-kintsugi-voice-api
+- type: DeveloperPortal
+  url: https://www.kintsugihealth.com/api/intro-to-kintsugi-voice-api
+- type: GettingStarted
+  url: https://www.kintsugihealth.com/request-demo
+- type: Support
+  url: https://www.kintsugihealth.com/contact-us
+- type: Blog
+  url: https://www.kintsugihealth.com/blog
+- type: TermsOfService
+  url: https://www.kintsugihealth.com/terms
+- type: PrivacyPolicy
+  url: https://www.kintsugihealth.com/privacy
+
+apis:
+- name: Kintsugi Voice API
+  description: Provides endpoints to initiate a session, submit audio, retrieve results, and submit feedback for voice biomarker analysis.
+  humanURL: https://www.kintsugihealth.com/api/get-started
+  baseURL: null
+  aid: kintsugi-health:kintsugi-voice-api
+- aid: kintsugi-health:kintsugi-health-api
+  name: Kintsugi Health API
+  description: 'Kintsugi Health API as documented publicly: 15 operations. Contract generated from the documentation by API Evangelist (2026-10-14);
+
+    not the provider''s own document.'
+  humanURL: https://www.kintsugihealth.com/api/voice-api
+  baseURL: https://api.kintsugihealth.com
+  properties:
+  - type: OpenAPI
+    url: openapi/_ae-authored/kintsugi-health-openapi-generated.yml
+    x-provenance: generated
+  - type: JSONSchema
+    url: json-schema/kintsugi-health-post-v2-v2-id-request-schema.json
+  - type: JSONSchema
+    url: json-schema/kintsugi-health-post-v2-prediction-response-schema.json
+  - type: JSONSchema
+    url: json-schema/kintsugi-health-get-v2-predict-sessions-sessionid-response-schema.json
+  - type: JSONSchema
+    url: json-schema/kintsugi-health-patch-v2-feedback-depression-binary-response-schema.json
+  - type: JSONSchema
+    url: json-schema/kintsugi-health-patch-v2-feedback-gad7-response-schema.json
+  - type: JSONSchema
+    url: json-schema/kintsugi-health-patch-v2-feedback-phq-phqid-response-schema.json
+x-enrichment:
+  date: '2026-10-14'
+  status: enriched
+  artifacts_added: 18
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local

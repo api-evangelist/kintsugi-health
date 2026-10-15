@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/kintsugi-health/main/json-schema/kintsugi-health-patch-v2-feedback-gad7-response-schema.json",
+  "title": "PatchV2FeedbackGad7Response",
+  "x-generated": "2026-10-14",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/kintsugi-health-openapi-generated.yml#/components/schemas/PatchV2FeedbackGad7Response",
+  "type": "object",
+  "properties": {
+    "200": {
+      "type": "string",
+      "description": "N/A – success."
+    },
+    "401": {
+      "type": "object",
+      "description": "{ \"message\": \"string\" }"
+    },
+    "403": {
+      "type": "object",
+      "description": "{ \"message\": \"string\" }"
+    },
+    "404": {
+      "type": "object",
+      "description": "{ \"message\": \"string\" }"
+    },
+    "409": {
+      "type": "object",
+      "description": "{ \"message\": \"string\" }"
+    },
+    "422": {
+      "type": "object",
+      "description": "{ \"message\": \"string\" }"
+    },
+    "500": {
+      "type": "object",
+      "description": "{ \"message\": \"string\" }"
+    }
+  }
+}

@@ -1,0 +1,72 @@
+generated: '2026-10-14'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 3
+  own: 3
+  other_domain: 0
+  platform: 0
+  roles:
+  - api
+  - other
+  - website
+hosts:
+- host: api.kintsugihealth.com
+  found_by:
+  - apis[]
+  - probed
+  - site-links
+  - namespace-probe
+  - contract-discovery
+  - well-known
+  types: []
+  serves:
+  - api
+  title: API Intro
+  status: 200
+  registrable_domain: kintsugihealth.com
+  role: api
+  relation: own
+- host: trust.kintsugihealth.com
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types:
+  - TrustCenter
+  serves: []
+  registrable_domain: kintsugihealth.com
+  role: other
+  relation: own
+- host: www.kintsugihealth.com
+  found_by:
+  - pointer
+  - apis[]
+  - probed
+  - docs-index
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - Security
+  - SDKs
+  - Newsroom
+  - Leadership
+  - Website
+  - Documentation
+  - DeveloperPortal
+  - GettingStarted
+  - Support
+  - Blog
+  - TermsOfService
+  - PrivacyPolicy
+  serves:
+  - docs
+  - cdn
+  vendor: cloudflare
+  registrable_domain: kintsugihealth.com
+  role: website
+  relation: own

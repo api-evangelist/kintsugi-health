@@ -1,0 +1,27 @@
+generated: '2026-10-14'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://www.kintsugihealth.com/api/regulatory-and-compliance
+sources:
+- https://www.kintsugihealth.com/api/regulatory-and-compliance
+- https://www.kintsugihealth.com/api/voice-api-signal
+standards:
+- id: hipaa
+  conforms: true
+  evidence: Patient Consent Kintsugi understands the importance of protecting patient rights and welfare as outlined in HIPAA.
+- id: soc2
+  conforms: true
+  evidence: Our technology is SOC II compliant and undergoes regular audits to ensure your patients' data remains secure.
+- id: openapi-3.1
+  conforms: true
+  evidence: the document declares 3.1.0
+- id: oauth2
+  conforms: false
+  evidence: 'securitySchemes: apiKey (apiKey)'
+- id: rfc9457
+  conforms: false
+  evidence: no response declares application/problem+json
+- id: idempotency
+  conforms: false
+  evidence: no idempotency key parameter on mutating operations
+docs: https://www.kintsugihealth.com/api/regulatory-and-compliance

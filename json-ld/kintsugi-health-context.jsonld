@@ -1,0 +1,131 @@
+{
+  "@context": {
+    "@vocab": "https://kintsugihealth.com/schema#",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "kintsugi": "https://kintsugihealth.com/schema#",
+    "PatchFeedbackServerPhq9Request": "kintsugi:PatchFeedbackServerPhq9Request",
+    "session_id": {
+      "@id": "kintsugi:session_id",
+      "@type": "xsd:string"
+    },
+    "actual_score": {
+      "@id": "kintsugi:actual_score",
+      "@container": "@list"
+    },
+    "PostInitiateRequest": "kintsugi:PostInitiateRequest",
+    "user_id": {
+      "@id": "kintsugi:user_id",
+      "@type": "xsd:string"
+    },
+    "is_initiated": {
+      "@id": "kintsugi:is_initiated",
+      "@type": "xsd:boolean"
+    },
+    "PostInitiateResponse": "kintsugi:PostInitiateResponse",
+    "PostPredictRequest": "kintsugi:PostPredictRequest",
+    "status": {
+      "@id": "kintsugi:status",
+      "@type": "xsd:string"
+    },
+    "PostPredictResponse": "kintsugi:PostPredictResponse",
+    "created_at": {
+      "@id": "kintsugi:created_at",
+      "@type": "xsd:string"
+    },
+    "disclaimer": {
+      "@id": "kintsugi:disclaimer",
+      "@type": "xsd:string"
+    },
+    "is_calibrated": {
+      "@id": "kintsugi:is_calibrated",
+      "@type": "xsd:boolean"
+    },
+    "model_category": {
+      "@id": "kintsugi:model_category",
+      "@type": "xsd:string"
+    },
+    "model_granularity": {
+      "@id": "kintsugi:model_granularity",
+      "@type": "xsd:string"
+    },
+    "predicted_is_deepfake": {
+      "@id": "kintsugi:predicted_is_deepfake",
+      "@type": "xsd:boolean"
+    },
+    "predicted_deepfake_score": {
+      "@id": "kintsugi:predicted_deepfake_score",
+      "@type": "xsd:integer"
+    },
+    "predicted_score": {
+      "@id": "kintsugi:predicted_score",
+      "@type": "xsd:string"
+    },
+    "updated_at": {
+      "@id": "kintsugi:updated_at",
+      "@type": "xsd:string"
+    },
+    "PostPredictServerDepressionDepressionidRequest": "kintsugi:PostPredictServerDepressionDepressionidRequest",
+    "file": {
+      "@id": "kintsugi:file",
+      "@type": "xsd:string"
+    },
+    "PostPredictServerDepressionDepressionidResponse": "kintsugi:PostPredictServerDepressionDepressionidResponse",
+    "name": {
+      "@id": "kintsugi:name",
+      "@type": "xsd:string"
+    },
+    "value": {
+      "@id": "kintsugi:value",
+      "@type": "xsd:integer"
+    },
+    "PatchV2FeedbackDepressionBinaryRequest": "kintsugi:PatchV2FeedbackDepressionBinaryRequest",
+    "PatchV2FeedbackDepressionBinaryResponse": "kintsugi:PatchV2FeedbackDepressionBinaryResponse",
+    "PatchV2FeedbackGad7Request": "kintsugi:PatchV2FeedbackGad7Request",
+    "PatchV2FeedbackGad7Response": "kintsugi:PatchV2FeedbackGad7Response",
+    "PatchV2FeedbackPhqPhqidRequest": "kintsugi:PatchV2FeedbackPhqPhqidRequest",
+    "PatchV2FeedbackPhqPhqidResponse": "kintsugi:PatchV2FeedbackPhqPhqidResponse",
+    "GetV2PredictSessionsSessionidResponse": "kintsugi:GetV2PredictSessionsSessionidResponse",
+    "GetV2PredictUsersUseridResponse": "kintsugi:GetV2PredictUsersUseridResponse",
+    "PostV2PredictionRequest": "kintsugi:PostV2PredictionRequest",
+    "PostV2PredictionResponse": "kintsugi:PostV2PredictionResponse",
+    "PostV2V2IdRequest": "kintsugi:PostV2V2IdRequest",
+    "metadata.age": {
+      "@id": "kintsugi:metadata.age",
+      "@type": "xsd:integer"
+    },
+    "metadata.gender": {
+      "@id": "kintsugi:metadata.gender",
+      "@type": "xsd:string"
+    },
+    "metadata.race": {
+      "@id": "kintsugi:metadata.race",
+      "@type": "xsd:string"
+    },
+    "metadata.ethnicity": {
+      "@id": "kintsugi:metadata.ethnicity",
+      "@type": "xsd:string"
+    },
+    "metadata.zipcode": {
+      "@id": "kintsugi:metadata.zipcode",
+      "@type": "xsd:string"
+    },
+    "metadata.language": {
+      "@id": "kintsugi:metadata.language",
+      "@type": "xsd:boolean"
+    },
+    "metadata.weight": {
+      "@id": "kintsugi:metadata.weight",
+      "@type": "xsd:integer"
+    },
+    "PostV2V2IdResponse": "kintsugi:PostV2V2IdResponse"
+  },
+  "@type": "schema:Dataset",
+  "schema:name": "Kintsugi Health API JSON-LD context",
+  "schema:description": "A JSON-LD @context for the objects Kintsugi Health's own API contract declares: one class per component schema, one property per declared field, typed from the contract. Derived by script (derive-json-ld.py, 2026-10-14) from openapi/_ae-authored/kintsugi-health-openapi-generated.yml.",
+  "dcterms:created": "2026-10-14",
+  "dcterms:source": [
+    "openapi/_ae-authored/kintsugi-health-openapi-generated.yml"
+  ]
+}

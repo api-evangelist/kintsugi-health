@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/kintsugi-health/main/json-schema/kintsugi-health-post-v2-prediction-response-schema.json",
+  "title": "PostV2PredictionResponse",
+  "x-generated": "2026-10-14",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/kintsugi-health-openapi-generated.yml#/components/schemas/PostV2PredictionResponse",
+  "type": "object",
+  "properties": {
+    "202": {
+      "type": "object",
+      "description": "{ \"session_id\": \"string\", \"status\": \"string\" }"
+    },
+    "401": {
+      "type": "object",
+      "description": "{ \"message\": \"string\" }"
+    },
+    "403": {
+      "type": "object",
+      "description": "{ \"message\": \"string\" }"
+    },
+    "404": {
+      "type": "object",
+      "description": "{ \"message\": \"string\" }"
+    },
+    "406": {
+      "type": "object",
+      "description": "{ \"message\": \"string\" }"
+    },
+    "409": {
+      "type": "object",
+      "description": "{ \"message\": \"string\" }"
+    },
+    "422": {
+      "type": "object",
+      "description": "{ \"message\": \"string\" }"
+    },
+    "500": {
+      "type": "object",
+      "description": "{ \"message\": \"string\" }"
+    }
+  }
+}

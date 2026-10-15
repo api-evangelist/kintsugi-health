@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/kintsugi-health/main/json-schema/kintsugi-health-post-v2-v2-id-request-schema.json",
+  "title": "PostV2V2IdRequest",
+  "x-generated": "2026-10-14",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/kintsugi-health-openapi-generated.yml#/components/schemas/PostV2V2IdRequest",
+  "type": "object",
+  "properties": {
+    "user_id": {
+      "type": "string",
+      "description": "Identifier to track the patient."
+    },
+    "is_initiated": {
+      "type": "boolean",
+      "description": "Consent flag."
+    },
+    "metadata.age": {
+      "type": "integer",
+      "description": "Patient age (>0)."
+    },
+    "metadata.gender": {
+      "type": "string",
+      "description": "Patient gender."
+    },
+    "metadata.race": {
+      "type": "string",
+      "description": "Patient race."
+    },
+    "metadata.ethnicity": {
+      "type": "string",
+      "description": "Patient ethnicity."
+    },
+    "metadata.zipcode": {
+      "type": "string",
+      "description": "5‑digit US zipcode."
+    },
+    "metadata.language": {
+      "type": "boolean",
+      "description": "First language English flag."
+    },
+    "metadata.weight": {
+      "type": "integer",
+      "description": "Body weight in lbs (>0)."
+    }
+  },
+  "required": [
+    "user_id",
+    "is_initiated"
+  ]
+}
