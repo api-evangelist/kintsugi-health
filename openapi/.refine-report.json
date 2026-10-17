@@ -1,0 +1,24 @@
+{
+  "provider": "kintsugi-health",
+  "sources": [
+    "_ae-authored/kintsugi-health-openapi-generated.yml"
+  ],
+  "outputs": [
+    "kintsugi-health-feedback-api-openapi.yml",
+    "kintsugi-health-initiate-api-openapi.yml",
+    "kintsugi-health-kintsugi-health-api-api-openapi.yml",
+    "kintsugi-health-predict-api-openapi.yml",
+    "kintsugi-health-prediction-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [
+    "sourced from openapi/_original/ (0 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "kintsugi-health-openapi-generated.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "kintsugi-health-openapi-generated.yml: tagged paths POST /v2/{v2id} -> Kintsugi Health API",
+    "kintsugi-health-openapi-generated.yml: declared missing tag: Kintsugi Health API",
+    "apis.yml register: written (+5 apis, 6 total)"
+  ],
+  "skipped": []
+}

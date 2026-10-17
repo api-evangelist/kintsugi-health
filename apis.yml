@@ -94,21 +94,111 @@ common:
 
 apis:
 - name: Kintsugi Voice API
-  description: Provides endpoints to initiate a session, submit audio, retrieve results, and submit feedback for voice biomarker analysis.
+  description: >-
+    Provides endpoints to initiate a session, submit audio, retrieve results, and submit feedback for
+    voice biomarker analysis.
   humanURL: https://www.kintsugihealth.com/api/get-started
   baseURL: null
   aid: kintsugi-health:kintsugi-voice-api
-- aid: kintsugi-health:kintsugi-health-api
-  name: Kintsugi Health API
-  description: 'Kintsugi Health API as documented publicly: 15 operations. Contract generated from the documentation by API Evangelist (2026-10-14);
-
-    not the provider''s own document.'
-  humanURL: https://www.kintsugihealth.com/api/voice-api
+- aid: kintsugi-health:kintsugi-health-feedback-api
+  name: Kintsugi Health Feedback API
+  description: The Feedback API from Kintsugi Health — 6 operation(s) for feedback.
+  humanURL: https://www.kintsugihealth.com/api/get-started
   baseURL: https://api.kintsugihealth.com
+  tags:
+  - Feedback
   properties:
   - type: OpenAPI
-    url: openapi/_ae-authored/kintsugi-health-openapi-generated.yml
-    x-provenance: generated
+    url: openapi/kintsugi-health-feedback-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/kintsugi-health-post-v2-v2-id-request-schema.json
+  - type: JSONSchema
+    url: json-schema/kintsugi-health-post-v2-prediction-response-schema.json
+  - type: JSONSchema
+    url: json-schema/kintsugi-health-get-v2-predict-sessions-sessionid-response-schema.json
+  - type: JSONSchema
+    url: json-schema/kintsugi-health-patch-v2-feedback-depression-binary-response-schema.json
+  - type: JSONSchema
+    url: json-schema/kintsugi-health-patch-v2-feedback-gad7-response-schema.json
+  - type: JSONSchema
+    url: json-schema/kintsugi-health-patch-v2-feedback-phq-phqid-response-schema.json
+- aid: kintsugi-health:kintsugi-health-initiate-api
+  name: Kintsugi Health Initiate API
+  description: The Initiate API from Kintsugi Health — 2 operation(s) for initiate.
+  humanURL: https://www.kintsugihealth.com/api/get-started
+  baseURL: https://api.kintsugihealth.com
+  tags:
+  - Initiate
+  properties:
+  - type: OpenAPI
+    url: openapi/kintsugi-health-initiate-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/kintsugi-health-post-v2-v2-id-request-schema.json
+  - type: JSONSchema
+    url: json-schema/kintsugi-health-post-v2-prediction-response-schema.json
+  - type: JSONSchema
+    url: json-schema/kintsugi-health-get-v2-predict-sessions-sessionid-response-schema.json
+  - type: JSONSchema
+    url: json-schema/kintsugi-health-patch-v2-feedback-depression-binary-response-schema.json
+  - type: JSONSchema
+    url: json-schema/kintsugi-health-patch-v2-feedback-gad7-response-schema.json
+  - type: JSONSchema
+    url: json-schema/kintsugi-health-patch-v2-feedback-phq-phqid-response-schema.json
+- aid: kintsugi-health:kintsugi-health-kintsugi-health-api-api
+  name: Kintsugi Health Kintsugi Health API
+  description: >-
+    The Kintsugi Health API API from Kintsugi Health — 1 operation(s) for kintsugi health api.
+  humanURL: https://www.kintsugihealth.com/api/get-started
+  baseURL: https://api.kintsugihealth.com
+  tags:
+  - Kintsugi Health API
+  properties:
+  - type: OpenAPI
+    url: openapi/kintsugi-health-kintsugi-health-api-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/kintsugi-health-post-v2-v2-id-request-schema.json
+  - type: JSONSchema
+    url: json-schema/kintsugi-health-post-v2-prediction-response-schema.json
+  - type: JSONSchema
+    url: json-schema/kintsugi-health-get-v2-predict-sessions-sessionid-response-schema.json
+  - type: JSONSchema
+    url: json-schema/kintsugi-health-patch-v2-feedback-depression-binary-response-schema.json
+  - type: JSONSchema
+    url: json-schema/kintsugi-health-patch-v2-feedback-gad7-response-schema.json
+  - type: JSONSchema
+    url: json-schema/kintsugi-health-patch-v2-feedback-phq-phqid-response-schema.json
+- aid: kintsugi-health:kintsugi-health-predict-api
+  name: Kintsugi Health Predict API
+  description: The Predict API from Kintsugi Health — 5 operation(s) for predict.
+  humanURL: https://www.kintsugihealth.com/api/get-started
+  baseURL: https://api.kintsugihealth.com
+  tags:
+  - Predict
+  properties:
+  - type: OpenAPI
+    url: openapi/kintsugi-health-predict-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/kintsugi-health-post-v2-v2-id-request-schema.json
+  - type: JSONSchema
+    url: json-schema/kintsugi-health-post-v2-prediction-response-schema.json
+  - type: JSONSchema
+    url: json-schema/kintsugi-health-get-v2-predict-sessions-sessionid-response-schema.json
+  - type: JSONSchema
+    url: json-schema/kintsugi-health-patch-v2-feedback-depression-binary-response-schema.json
+  - type: JSONSchema
+    url: json-schema/kintsugi-health-patch-v2-feedback-gad7-response-schema.json
+  - type: JSONSchema
+    url: json-schema/kintsugi-health-patch-v2-feedback-phq-phqid-response-schema.json
+- aid: kintsugi-health:kintsugi-health-prediction-api
+  name: Kintsugi Health Prediction API
+  description: The Prediction API from Kintsugi Health — 1 operation(s) for prediction.
+  humanURL: https://www.kintsugihealth.com/api/get-started
+  baseURL: https://api.kintsugihealth.com
+  tags:
+  - Prediction
+  properties:
+  - type: OpenAPI
+    url: openapi/kintsugi-health-prediction-api-openapi.yml
   - type: JSONSchema
     url: json-schema/kintsugi-health-post-v2-v2-id-request-schema.json
   - type: JSONSchema

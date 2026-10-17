@@ -1,0 +1,336 @@
+openapi: 3.2.0
+info:
+  title: Kintsugi Health Feedback API
+  version: '2026-10-14'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-14: 15 operation(s) read from 3 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; Kintsugi Health has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 6
+    documentation: 9
+    pages-with-code: 3
+    pages-read: 3
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-14'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://www.kintsugihealth.com/api/voice-api
+  - https://www.kintsugihealth.com/api/voice-api-signal
+  - https://www.kintsugihealth.com/api/initiate-a-session-1-0
+servers:
+- url: https://api.kintsugihealth.com
+security:
+- apiKey: []
+tags:
+- name: Feedback
+paths:
+  /feedback/server/phq/9:
+    patch:
+      operationId: patch_feedback_server_phq_9
+      tags:
+      - Feedback
+      summary: PHQ-9
+      x-source: https://www.kintsugihealth.com/api/initiate-a-session-1-0
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchFeedbackServerPhq9Request'
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /v1/feedback/server/depression/binary:
+    patch:
+      operationId: patch_v1_feedback_server_depression_binary
+      tags:
+      - Feedback
+      summary: PATCH /v1/feedback/server/depression/binary
+      x-source: https://www.kintsugihealth.com/api/voice-api
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: javascript
+        snippet: "fetch('https://api.kintsugihealth.com/v1/feedback/server/depression/binary', {\n method: 'PATCH',\n headers: { ...headers, ...feedbackFormData.getHeaders() },\n body: feedbackFormData,\n})"
+  /v1/feedback/server/phq/{phqid}:
+    patch:
+      operationId: patch_v1_feedback_server_phq_phqid
+      tags:
+      - Feedback
+      summary: PATCH /v1/feedback/server/phq/2
+      x-source: https://www.kintsugihealth.com/api/voice-api
+      parameters:
+      - name: phqid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: javascript
+        snippet: "fetch('https://api.kintsugihealth.com/v1/feedback/server/phq/2', {\n method: 'PATCH',\n headers: {...headers, 'Content-Type': 'application/json'},\n body: JSON.stringify({'session_id': sessionID, 'actual_score': [1, 2]})"
+        collapsed_from: 2 example path(s) differing only at phqId
+  /v2/feedback/depression/binary:
+    patch:
+      operationId: patch_v2_feedback_depression_binary
+      tags:
+      - Feedback
+      summary: Submit Feedback – Binary depression result
+      x-source: https://www.kintsugihealth.com/api/voice-api
+      parameters:
+      - name: Accept
+        in: header
+        required: true
+        schema:
+          type: string
+        description: application/json
+      - name: Content-Type
+        in: header
+        required: true
+        schema:
+          type: string
+        description: application/json
+      - name: X-API-Key
+        in: header
+        required: true
+        schema:
+          type: string
+        description: Your API Key
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchV2FeedbackDepressionBinaryRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PatchV2FeedbackDepressionBinaryResponse'
+      x-evidence:
+        kind: documentation
+  /v2/feedback/gad/7:
+    patch:
+      operationId: patch_v2_feedback_gad_7
+      tags:
+      - Feedback
+      summary: Submit Feedback – GAD‑7
+      x-source: https://www.kintsugihealth.com/api/voice-api
+      parameters:
+      - name: Accept
+        in: header
+        required: true
+        schema:
+          type: string
+        description: application/json
+      - name: Content-Type
+        in: header
+        required: true
+        schema:
+          type: string
+        description: application/json
+      - name: X-API-Key
+        in: header
+        required: true
+        schema:
+          type: string
+        description: Your API Key
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchV2FeedbackGad7Request'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PatchV2FeedbackGad7Response'
+      x-evidence:
+        kind: documentation
+  /v2/feedback/phq/{phqid}:
+    patch:
+      operationId: patch_v2_feedback_phq_phqid
+      tags:
+      - Feedback
+      summary: Submit Feedback – PHQ‑2
+      x-source: https://www.kintsugihealth.com/api/voice-api
+      parameters:
+      - name: phqid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: Accept
+        in: header
+        required: true
+        schema:
+          type: string
+        description: application/json
+      - name: Content-Type
+        in: header
+        required: true
+        schema:
+          type: string
+        description: application/json
+      - name: X-API-Key
+        in: header
+        required: true
+        schema:
+          type: string
+        description: Your API Key
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchV2FeedbackPhqPhqidRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PatchV2FeedbackPhqPhqidResponse'
+      x-evidence:
+        kind: documentation
+        collapsed_from: 2 example path(s) differing only at phqId
+components:
+  schemas:
+    PatchFeedbackServerPhq9Request:
+      type: object
+      properties:
+        session_id:
+          type: string
+          description: Session identifier from the Initiate endpoint.
+        actual_score:
+          type: array
+          description: Array of 9 integers (0‑3) for PHQ‑9 items.
+      required:
+      - session_id
+      - actual_score
+    PatchV2FeedbackPhqPhqidResponse:
+      type: object
+      properties:
+        '200':
+          type: string
+          description: N/A – success.
+        '401':
+          type: object
+          description: '{ "message": "string" }'
+        '403':
+          type: object
+          description: '{ "message": "string" }'
+        '404':
+          type: object
+          description: '{ "message": "string" }'
+        '409':
+          type: object
+          description: '{ "message": "string" }'
+        '422':
+          type: object
+          description: '{ "message": "string" }'
+        '500':
+          type: object
+          description: '{ "message": "string" }'
+    PatchV2FeedbackDepressionBinaryRequest:
+      type: object
+      properties:
+        session_id:
+          type: string
+          description: Session identifier.
+        actual_score:
+          type: boolean
+          description: True, False, or Additional_consideration_required.
+      required:
+      - session_id
+      - actual_score
+    PatchV2FeedbackGad7Request:
+      type: object
+      properties:
+        session_id:
+          type: string
+          description: Session identifier.
+        actual_score:
+          type: array
+          description: Array of 7 integers (0‑3).
+      required:
+      - session_id
+      - actual_score
+    PatchV2FeedbackGad7Response:
+      type: object
+      properties:
+        '200':
+          type: string
+          description: N/A – success.
+        '401':
+          type: object
+          description: '{ "message": "string" }'
+        '403':
+          type: object
+          description: '{ "message": "string" }'
+        '404':
+          type: object
+          description: '{ "message": "string" }'
+        '409':
+          type: object
+          description: '{ "message": "string" }'
+        '422':
+          type: object
+          description: '{ "message": "string" }'
+        '500':
+          type: object
+          description: '{ "message": "string" }'
+    PatchV2FeedbackDepressionBinaryResponse:
+      type: object
+      properties:
+        '200':
+          type: string
+          description: N/A – success.
+        '401':
+          type: object
+          description: '{ "message": "string" }'
+        '403':
+          type: object
+          description: '{ "message": "string" }'
+        '404':
+          type: object
+          description: '{ "message": "string" }'
+        '409':
+          type: object
+          description: '{ "message": "string" }'
+        '422':
+          type: object
+          description: '{ "message": "string" }'
+        '500':
+          type: object
+          description: '{ "message": "string" }'
+    PatchV2FeedbackPhqPhqidRequest:
+      type: object
+      properties:
+        session_id:
+          type: string
+          description: Session identifier.
+        actual_score:
+          type: array
+          description: Array of 2 integers (0‑3).
+      required:
+      - session_id
+      - actual_score
+  securitySchemes:
+    apiKey:
+      type: apiKey
+      in: header
+      name: X-API-Key

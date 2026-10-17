@@ -1,0 +1,88 @@
+openapi: 3.2.0
+info:
+  title: Kintsugi Health Initiate API
+  version: '2026-10-14'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-14: 15 operation(s) read from 3 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; Kintsugi Health has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 6
+    documentation: 9
+    pages-with-code: 3
+    pages-read: 3
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-14'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://www.kintsugihealth.com/api/voice-api
+  - https://www.kintsugihealth.com/api/voice-api-signal
+  - https://www.kintsugihealth.com/api/initiate-a-session-1-0
+servers:
+- url: https://api.kintsugihealth.com
+security:
+- apiKey: []
+tags:
+- name: Initiate
+paths:
+  /initiate:
+    post:
+      operationId: post_initiate
+      tags:
+      - Initiate
+      summary: Initiate a Session
+      x-source: https://www.kintsugihealth.com/api/voice-api-signal
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostInitiateRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostInitiateResponse'
+      x-evidence:
+        kind: documentation
+  /v1/initiate:
+    post:
+      operationId: post_v1_initiate
+      tags:
+      - Initiate
+      summary: POST /v1/initiate
+      x-source: https://www.kintsugihealth.com/api/voice-api
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: javascript
+        snippet: "fetch('https://api.kintsugihealth.com/v1/initiate', {\n method: 'POST',\n headers: { ...headers, ...initiateFormData.getHeaders() },\n body: initiateFormData,\n})"
+components:
+  schemas:
+    PostInitiateResponse:
+      type: object
+      properties:
+        session_id:
+          type: string
+          description: Unique identifier for the analysis session.
+    PostInitiateRequest:
+      type: object
+      properties:
+        user_id:
+          type: string
+          description: User identifier
+        is_initiated:
+          type: boolean
+          description: Flag indicating initiation
+      required:
+      - user_id
+      - is_initiated
+  securitySchemes:
+    apiKey:
+      type: apiKey
+      in: header
+      name: X-API-Key

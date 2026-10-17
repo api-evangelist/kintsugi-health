@@ -1,0 +1,135 @@
+openapi: 3.2.0
+info:
+  title: Kintsugi Health API
+  version: '2026-10-14'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-14: 15 operation(s) read from 3 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; Kintsugi Health has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 6
+    documentation: 9
+    pages-with-code: 3
+    pages-read: 3
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-14'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://www.kintsugihealth.com/api/voice-api
+  - https://www.kintsugihealth.com/api/voice-api-signal
+  - https://www.kintsugihealth.com/api/initiate-a-session-1-0
+servers:
+- url: https://api.kintsugihealth.com
+security:
+- apiKey: []
+tags:
+- name: Kintsugi Health API
+paths:
+  /v2/{v2id}:
+    post:
+      operationId: post_v2_v2id
+      tags:
+      - Kintsugi Health API
+      summary: Initiate a Session
+      x-source: https://www.kintsugihealth.com/api/voice-api
+      parameters:
+      - name: v2id
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: Accept
+        in: header
+        required: true
+        schema:
+          type: string
+        description: application/x-www-form-urlencoded
+      - name: Content-Type
+        in: header
+        required: true
+        schema:
+          type: string
+        description: application/x-www-form-urlencoded
+      - name: X-API-Key
+        in: header
+        required: true
+        schema:
+          type: string
+        description: Your API Key
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostV2V2IdRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostV2V2IdResponse'
+      x-evidence:
+        kind: documentation
+        collapsed_from: 2 example path(s) differing only at v2Id
+components:
+  schemas:
+    PostV2V2IdResponse:
+      type: object
+      properties:
+        '201':
+          type: object
+          description: '{ "session_id": "..." }'
+        '401':
+          type: object
+          description: '{ "message": "string" }'
+        '403':
+          type: object
+          description: '{ "message": "string" }'
+        '406':
+          type: object
+          description: '{ "message": "string" }'
+        '422':
+          type: object
+          description: '{ "message": "string" }'
+        '500':
+          type: object
+          description: '{ "message": "string" }'
+    PostV2V2IdRequest:
+      type: object
+      properties:
+        user_id:
+          type: string
+          description: Identifier to track the patient.
+        is_initiated:
+          type: boolean
+          description: Consent flag.
+        metadata.age:
+          type: integer
+          description: Patient age (>0).
+        metadata.gender:
+          type: string
+          description: Patient gender.
+        metadata.race:
+          type: string
+          description: Patient race.
+        metadata.ethnicity:
+          type: string
+          description: Patient ethnicity.
+        metadata.zipcode:
+          type: string
+          description: 5‑digit US zipcode.
+        metadata.language:
+          type: boolean
+          description: First language English flag.
+        metadata.weight:
+          type: integer
+          description: Body weight in lbs (>0).
+      required:
+      - user_id
+      - is_initiated
+  securitySchemes:
+    apiKey:
+      type: apiKey
+      in: header
+      name: X-API-Key
