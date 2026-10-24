@@ -34,6 +34,12 @@ created: '2026-10-14'
 modified: '2026-10-14'
 
 tags:
+- Health Tech
+- Artificial Intelligence
+- Voice Analytics
+- Mental Health
+- Digital Health
+tags_raw:
 - HealthTech
 - AI
 - VoiceAnalytics
@@ -195,6 +201,8 @@ apis:
   humanURL: https://www.kintsugihealth.com/api/get-started
   baseURL: https://api.kintsugihealth.com
   tags:
+  - Predictions
+  tags_raw:
   - Prediction
   properties:
   - type: OpenAPI
