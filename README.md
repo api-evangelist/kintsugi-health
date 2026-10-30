@@ -64,5 +64,120 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Kintsugi Health is a company surfaced via the API Evangelist harvest backlog (source: tag-qc) and added to the network as a stub for full-pipeline profiling.
-- https://www.kintsugihealth.com
+Kintsugi Health provides AI-driven voice analysis solutions to detect mental health challenges and other clinical indicators from speech. Their Kintsugi Voice API enables developers to integrate real-time voice biomarker detection into healthcare applications, supporting use cases from depression screening to deep‑fake detection. The company emphasizes privacy, regulatory compliance, and evidence‑based technology, aiming to improve patient outcomes through innovative digital health tools.
+
+**Areas:** Health Tech · Artificial Intelligence · VoiceAnalytics · Mental Health · Digital Health
+
+## Kintsugi Health on APIs.io
+
+Everything profiled for Kintsugi Health is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/kintsugi-health/](https://apis.io/providers/kintsugi-health/)** — or go straight to one of the APIs or properties below.
+
+### APIs (6)
+
+- [Kintsugi Voice API](https://apis.io/apis/kintsugi-health/kintsugi-voice-api/) — Provides endpoints to initiate a session, submit audio, retrieve results, and submit feedback for voice biomarker analysis.
+- [Kintsugi Health Feedback API](https://apis.io/apis/kintsugi-health/kintsugi-health-feedback-api/) — The Feedback API from Kintsugi Health — 6 operation(s) for feedback.
+- [Kintsugi Health Initiate API](https://apis.io/apis/kintsugi-health/kintsugi-health-initiate-api/) — The Initiate API from Kintsugi Health — 2 operation(s) for initiate.
+- [Kintsugi Health Kintsugi Health API](https://apis.io/apis/kintsugi-health/kintsugi-health-kintsugi-health-api-api/) — The Kintsugi Health API API from Kintsugi Health — 1 operation(s) for kintsugi health api.
+- [Kintsugi Health Predict API](https://apis.io/apis/kintsugi-health/kintsugi-health-predict-api/) — The Predict API from Kintsugi Health — 5 operation(s) for predict.
+- [Kintsugi Health Prediction API](https://apis.io/apis/kintsugi-health/kintsugi-health-prediction-api/) — The Prediction API from Kintsugi Health — 1 operation(s) for prediction.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### JSON Schema (6)
+
+The data models the API reads and writes.
+
+- [GetV2PredictSessionsSessionidResponse](https://apis.io/schemas/kintsugi-health/kintsugi-health-get-v2-predict-sessions-sessionid-response/)
+- [PatchV2FeedbackDepressionBinaryResponse](https://apis.io/schemas/kintsugi-health/kintsugi-health-patch-v2-feedback-depression-binary-response/)
+- [PatchV2FeedbackGad7Response](https://apis.io/schemas/kintsugi-health/kintsugi-health-patch-v2-feedback-gad7-response/)
+- [PatchV2FeedbackPhqPhqidResponse](https://apis.io/schemas/kintsugi-health/kintsugi-health-patch-v2-feedback-phq-phqid-response/)
+- [PostV2PredictionResponse](https://apis.io/schemas/kintsugi-health/kintsugi-health-post-v2-prediction-response/)
+- [PostV2V2IdRequest](https://apis.io/schemas/kintsugi-health/kintsugi-health-post-v2-v2-id-request/)
+
+#### JSON-LD (1)
+
+Linked-data contexts for the provider's vocabulary.
+
+- [Kintsugi Health Context](https://apis.io/jsonld/kintsugi-health/kintsugi-health-context/)
+
+#### Governance rules (1)
+
+Spectral rulesets for the provider's contracts.
+
+- [Kintsugi Health API Rules](https://apis.io/rules/kintsugi-health/kintsugi-health-rules/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Kintsugi Health Authentication](https://apis.io/security/kintsugi-health/kintsugi-health-authentication/)
+- [Kintsugi Health Domain Security](https://apis.io/security/kintsugi-health/kintsugi-health-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.kintsugihealth.com)
+- [Documentation](https://www.kintsugihealth.com/api/intro-to-kintsugi-voice-api)
+- [Getting started](https://www.kintsugihealth.com/request-demo)
+- [Support](https://www.kintsugihealth.com/contact-us)
+- [Blog](https://www.kintsugihealth.com/blog)
+- [Security](https://www.kintsugihealth.com/blog-categories/security)
+- [Trust centre](https://trust.kintsugihealth.com/)
+- [Terms of service](https://www.kintsugihealth.com/terms)
+- [Privacy policy](https://www.kintsugihealth.com/privacy)
+
+## API Evangelist rating
+
+**Kin Score 37.4** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 66.1 |
+| Contract quality | 25.7 |
+| Contract governance | 35.6 |
+| Operational transparency | 10.5 |
+| Developer ergonomics | 57.1 |
+| Access clarity | 28.9 |
+
+**Agent readiness 15.5** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 27.2** — Health
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/kintsugi-health/](https://apis.io/providers/kintsugi-health/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Kintsugi Health: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/kintsugi-health/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
